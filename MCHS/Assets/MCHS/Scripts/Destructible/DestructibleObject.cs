@@ -1,13 +1,25 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using MCHS.Scripts.BackPack;
 using MCHS.Scripts.Destructible;
+using R3;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 //Made by Rajendra Abhinaya, 2023
 
 public class DestructibleObject : MonoBehaviour
 {
+    [SerializeField] private float _cooldown = 0.5f;
+    
+    [SerializeField] private Material _0;
+    [SerializeField] private Material _1;
+    [SerializeField] private Material _2;
+
+    [SerializeField] private MeshRenderer _meshRenderer;
+    
+    
     [SerializeField] private Despawn _prefabBroken;
 
     [SerializeField, Tooltip("Force required to break the object")]
@@ -15,7 +27,7 @@ public class DestructibleObject : MonoBehaviour
     
     [SerializeField, Tooltip("Time in seconds before debris will despawn when using the Timed despawn mode")]
     private float despawnTime;
-    [SerializeField] private int _health = 1;
+    [SerializeField] private int _health;
 
     [Header("Audio")]
     [SerializeField, Tooltip("List of audio clips that will be played when the object breaks. Audio clips are selected randomly from the list")]
@@ -30,15 +42,51 @@ public class DestructibleObject : MonoBehaviour
     [SerializeField, Tooltip("Amount of variation in the pitch volume of each audio clip played"), Range(0f, 0.5f)]
     private float pitchVariation;
 
-   
+    private ReactiveProperty<int> _healthProperty;
     
     private Despawn debris;
     private new Rigidbody rigidbody;
+    
+    private CompositeDisposable _disposables;
+    
+
+    private void Awake()
+    {
+        _healthProperty =  new ReactiveProperty<int>(_health);
+    }
+
+    private void OnEnable()
+    {
+        _disposables = new CompositeDisposable();
+        
+        _disposables.Add(_healthProperty.Subscribe(value =>
+        {
+            if(_meshRenderer == null) return;
+            
+            switch (value)
+            {
+                case 1:
+                    _meshRenderer.material = _2;
+                    break;
+                case 2:
+                    _meshRenderer.material = _1;
+                    break;
+                case 3:
+                    _meshRenderer.material = _0;
+                    break;
+            }
+        }));
+    }
+
+    private void OnDisable()
+    {
+        _disposables?.Dispose();
+    }
 
     public void Break(int force)
     {
-        _health -= force;
-        if (_health > 0) return;
+        _healthProperty.Value -= force;
+        if (_healthProperty.Value > 0) return;
         
         float velocityMagnitude = rigidbody.velocity.magnitude;
 
@@ -76,13 +124,19 @@ public class DestructibleObject : MonoBehaviour
         debris.gameObject.SetActive(false);
     }
 
+    private float _time = 0f;
+    
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.relativeVelocity.magnitude > forceRequired)
         {
-            if (collision.gameObject.TryGetComponent(out Axe axe1))
+            if (Time.time - _time >= _cooldown)
             {
-                Break(axe1.Force);
+                if (collision.gameObject.TryGetComponent(out Axe axe1))
+                {
+                    _time = Time.time;
+                    Break(axe1.Force);
+                }
             }
             /*else
             {

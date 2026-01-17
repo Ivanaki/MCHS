@@ -58,6 +58,10 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/ToggleQuests",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },

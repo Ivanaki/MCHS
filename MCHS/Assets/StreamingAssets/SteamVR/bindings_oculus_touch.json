@@ -308,6 +308,16 @@
                "mode" : "toggle_button",
                "parameters" : {},
                "path" : "/user/hand/right/input/a"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/togglequests"
+                  }
+               },
+               "mode" : "toggle_button",
+               "parameters" : {},
+               "path" : "/user/hand/left/input/y"
             }
          ]
       },
@@ -350,7 +360,7 @@
    "controller_type" : "oculus_touch",
    "description" : "",
    "interaction_profile" : "",
-   "name" : "hhhhhh",
+   "name" : "pppppppppppppppppppppp",
    "options" : {},
    "simulated_actions" : []
 }

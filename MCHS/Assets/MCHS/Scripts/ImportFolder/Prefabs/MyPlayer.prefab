@@ -416,6 +416,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerCamera: {fileID: 5392910075931700858}
+  _rightHand: {fileID: 569024886861129945}
+  _leftHand: {fileID: 7702835277247178448}
 --- !u!1 &1905886467024120239
 GameObject:
   m_ObjectHideFlags: 0
@@ -2901,7 +2903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _laserActiveLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 32768
   _laserDistance: 30
 --- !u!1001 &8671190330491222476
 PrefabInstance:

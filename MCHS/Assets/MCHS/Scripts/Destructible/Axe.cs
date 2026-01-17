@@ -1,5 +1,3 @@
-using System;
-using MCHS.Scripts.BackPack;
 using UnityEngine;
 
 namespace MCHS.Scripts.Destructible

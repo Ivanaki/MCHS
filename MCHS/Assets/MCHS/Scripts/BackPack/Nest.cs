@@ -53,12 +53,13 @@ namespace MCHS.Scripts.BackPack
         
         public bool TrySetItem(Item item)
         {
-            if (item.ItemType == ItemType && _currentItem == null && item.IsAttachedToHand.CurrentValue == false)
+            if (item.ItemType == ItemType && _currentItem == null && item.IsAttachedToHand.CurrentValue == false && item.IsNested == false)
             {
                 item.Rigidbody.isKinematic = true;
                 item.transform.SetParent(_itemParent);
                 item.transform.localPosition = Vector3.zero;
                 item.transform.localRotation = Quaternion.identity;
+                item.IsNested = true;
                 
                 //найдем нужный размер
                 item.transform.localScale *= item.SizeOfMaxSizeWhileInNest;
@@ -73,6 +74,8 @@ namespace MCHS.Scripts.BackPack
                 item.OnAttachedToHand.Take(1).Subscribe(_ =>
                 {
                     _currentItem.Rigidbody.isKinematic = false;
+                    _currentItem.transform.SetParent(null);
+                    _currentItem.IsNested = false;
                     
                     //Scale
                     _currentItem.transform.localScale /= _currentItem.SizeOfMaxSizeWhileInNest;

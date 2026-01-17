@@ -409,11 +409,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5889521905221023230, guid: c788c729af79fee46a9c981d8fdd0128,
-        type: 3}
-      propertyPath: _laserActiveLayers.m_Bits
-      value: 32768
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

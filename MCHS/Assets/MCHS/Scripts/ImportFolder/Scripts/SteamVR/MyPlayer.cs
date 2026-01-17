@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Valve.VR;
 using Valve.VR.InteractionSystem;
 
 namespace MySteamVR
@@ -7,6 +8,9 @@ namespace MySteamVR
     public class MyPlayer : MonoBehaviour
     {
         [SerializeField] private Camera _playerCamera;
+
+        [SerializeField] private Transform _rightHand;
+        [SerializeField] private Transform _leftHand;
         
         public Player Player { get; private set; }
         public static MyPlayer instance { get; private set; }
@@ -46,6 +50,37 @@ namespace MySteamVR
             objectToAttach.SetParent(transform);
             objectToAttach.localPosition = Vector3.zero;
             objectToAttach.localRotation = Quaternion.identity;
+        }
+
+        public bool TryAttachTo(SteamVR_Input_Sources type, Transform objectToAttach)
+        {
+            var parentTransform = type switch
+            {
+                SteamVR_Input_Sources.LeftHand => _leftHand,
+                SteamVR_Input_Sources.RightHand => _rightHand,
+                _ => null
+            };
+
+            if (parentTransform != null)
+            {
+                objectToAttach.SetParent(_leftHand);
+                objectToAttach.localPosition = Vector3.zero;
+                objectToAttach.localRotation = Quaternion.identity;
+                return true;
+            }
+            
+            Debug.LogError("Cannot find this type: " + type);
+            return false;
+        }
+
+        public Transform GetObjectTransform(SteamVR_Input_Sources type)
+        {
+            return type switch
+            {
+                SteamVR_Input_Sources.LeftHand => _leftHand,
+                SteamVR_Input_Sources.RightHand => _rightHand,
+                _ => null
+            };
         }
 
         public Camera GetCamera() => _playerCamera;
