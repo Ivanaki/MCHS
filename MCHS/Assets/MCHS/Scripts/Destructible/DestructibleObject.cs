@@ -30,8 +30,10 @@ public class DestructibleObject : MonoBehaviour
     [SerializeField] private int _health;
 
     [Header("Audio")]
+    [SerializeField] private List<AudioClip> _audioClipsPunch = new List<AudioClip>();
+    
     [SerializeField, Tooltip("List of audio clips that will be played when the object breaks. Audio clips are selected randomly from the list")]
-    private List<AudioClip> audioClips = new List<AudioClip>();
+    private List<AudioClip> audioClipsBreak = new List<AudioClip>();
 
     [SerializeField, Tooltip("Volume of the audio clip when played"), Range(0f, 1f)]
     private float volume;
@@ -49,10 +51,13 @@ public class DestructibleObject : MonoBehaviour
     
     private CompositeDisposable _disposables;
     
+    private AudioSource _audioSource = null;
+    
 
     private void Awake()
     {
         _healthProperty =  new ReactiveProperty<int>(_health);
+        TryGetComponent(out _audioSource);
     }
 
     private void OnEnable()
@@ -61,19 +66,25 @@ public class DestructibleObject : MonoBehaviour
         
         _disposables.Add(_healthProperty.Subscribe(value =>
         {
-            if(_meshRenderer == null) return;
-            
-            switch (value)
+            if (_meshRenderer != null)
             {
-                case 1:
-                    _meshRenderer.material = _2;
-                    break;
-                case 2:
-                    _meshRenderer.material = _1;
-                    break;
-                case 3:
-                    _meshRenderer.material = _0;
-                    break;
+                switch (value)
+                {
+                    case 1:
+                        _meshRenderer.material = _2;
+                        break;
+                    case 2:
+                        _meshRenderer.material = _1;
+                        break;
+                    case 3:
+                        _meshRenderer.material = _0;
+                        break;
+                }
+            }
+
+            if (_audioClipsPunch.Count > 0 && _audioSource != null && value is 2 or 1)
+            {
+                _audioSource.PlayOneShot(_audioClipsPunch[Random.Range(0, _audioClipsPunch.Count)]);
             }
         }));
     }
@@ -90,7 +101,7 @@ public class DestructibleObject : MonoBehaviour
         
         float velocityMagnitude = rigidbody.velocity.magnitude;
 
-        debris.SetVariables(audioClips[Random.Range(0, audioClips.Count)], volume, volumeVariation, pitchVariation);
+        debris.SetVariables(audioClipsBreak[Random.Range(0, audioClipsBreak.Count)], volume, volumeVariation, pitchVariation);
 
         
         //Activates the debris object and sets its position and rotation to match the object's

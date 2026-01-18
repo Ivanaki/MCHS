@@ -16,9 +16,13 @@ namespace MCHS.Scripts.BackPack
         //[SerializeField] private float _sphereOverlapRadius = 0.3f;
         //[SerializeField] private Transform _sphereOverlapsPosition;
         //[SerializeField] private LayerMask _sphereOverlapsLayerMask;
-        public bool IsNested = false;
+        [HideInInspector] public bool IsNested = false;
+        
         [field: SerializeField] public ItemType ItemType { get; private set; }
+        [field: SerializeField] public bool DontResize { get; private set; } = false;
         [field: SerializeField, Range(0f, 1f)] public float SizeOfMaxSizeWhileInNest { get; private set; } = 1f;
+        [field: SerializeField] public Quaternion RotationInNest { get; private set; } = Quaternion.identity;
+        [field: SerializeField] public Vector3 PositionInNest { get; private set; } = Vector3.zero;
         
         public Observable<Unit> OnAttachedToHand {get; private set;}
         

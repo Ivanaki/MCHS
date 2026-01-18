@@ -32007,6 +32007,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25,
         type: 3}
+    - target: {fileID: 114000012201270156, guid: 4d7627d70abb4e247b7d958e6634b2f1,
+        type: 3}
+      propertyPath: interactable
+      value: 
+      objectReference: {fileID: 2060464150}
     - target: {fileID: 137000012815384550, guid: 4d7627d70abb4e247b7d958e6634b2f1,
         type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
@@ -32017,6 +32022,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d7627d70abb4e247b7d958e6634b2f1, type: 3}
+--- !u!114 &2060464150 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114000010486924546, guid: 4d7627d70abb4e247b7d958e6634b2f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2060464149}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2063894651
 GameObject:
   m_ObjectHideFlags: 0

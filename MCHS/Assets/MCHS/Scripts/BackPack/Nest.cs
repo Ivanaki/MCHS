@@ -57,17 +57,21 @@ namespace MCHS.Scripts.BackPack
             {
                 item.Rigidbody.isKinematic = true;
                 item.transform.SetParent(_itemParent);
-                item.transform.localPosition = Vector3.zero;
-                item.transform.localRotation = Quaternion.identity;
+                item.transform.localPosition = item.PositionInNest;
+                item.transform.localRotation = item.RotationInNest;
                 item.IsNested = true;
                 
                 //найдем нужный размер
-                item.transform.localScale *= item.SizeOfMaxSizeWhileInNest;
+                if (item.DontResize == false)
+                {
+                    item.transform.localScale *= item.SizeOfMaxSizeWhileInNest;
                 
-                var lossyScale = transform.lossyScale;
-                var itemLocalScale = item.transform.localScale;
-                item.transform.localScale = new Vector3(itemLocalScale.x * lossyScale.x,
-                    itemLocalScale.y * lossyScale.y, itemLocalScale.z * lossyScale.z);
+                    var lossyScale = transform.lossyScale;
+                    var itemLocalScale = item.transform.localScale;
+                    item.transform.localScale = new Vector3(itemLocalScale.x * lossyScale.x,
+                        itemLocalScale.y * lossyScale.y, itemLocalScale.z * lossyScale.z);
+                }
+                
                 //
                 
 
@@ -78,12 +82,15 @@ namespace MCHS.Scripts.BackPack
                     _currentItem.IsNested = false;
                     
                     //Scale
-                    _currentItem.transform.localScale /= _currentItem.SizeOfMaxSizeWhileInNest;
+                    if (_currentItem.DontResize == false)
+                    {
+                        _currentItem.transform.localScale /= _currentItem.SizeOfMaxSizeWhileInNest;
                     
-                    var lossyScaleNew = transform.lossyScale;
-                    var itemLocalScaleNew = _currentItem.transform.localScale;
-                    _currentItem.transform.localScale = new Vector3(itemLocalScaleNew.x / lossyScaleNew.x,
-                        itemLocalScaleNew.y / lossyScaleNew.y, itemLocalScaleNew.z / lossyScaleNew.z);
+                        var lossyScaleNew = transform.lossyScale;
+                        var itemLocalScaleNew = _currentItem.transform.localScale;
+                        _currentItem.transform.localScale = new Vector3(itemLocalScaleNew.x / lossyScaleNew.x,
+                            itemLocalScaleNew.y / lossyScaleNew.y, itemLocalScaleNew.z / lossyScaleNew.z);
+                    }
                     //
                     
                     if (_currentHighlitghtedItem == _currentItem) UnHighlight();

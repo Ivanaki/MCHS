@@ -493,7 +493,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0.179, z: 0}
+  m_CenterOfMass: {x: 0, y: 0.14, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
@@ -653,7 +653,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsNested: 0
   <ItemType>k__BackingField: 1
+  <DontResize>k__BackingField: 0
   <SizeOfMaxSizeWhileInNest>k__BackingField: 1
+  <RotationInNest>k__BackingField: {x: 0, y: 0, z: 0, w: 1}
+  <PositionInNest>k__BackingField: {x: 0, y: 0, z: 0}
 --- !u!114 &251163555782686884
 MonoBehaviour:
   m_ObjectHideFlags: 0

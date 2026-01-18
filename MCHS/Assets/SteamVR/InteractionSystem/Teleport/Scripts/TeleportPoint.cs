@@ -16,6 +16,8 @@ namespace Valve.VR.InteractionSystem
 	//-------------------------------------------------------------------------
 	public class TeleportPoint : TeleportMarkerBase
 	{
+		[SerializeField] private float _minDistanceToPlayerToActivatePoint = 1f;
+		
 		public enum TeleportPointType
 		{
 			MoveToLocation,
@@ -109,7 +111,7 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		public override bool ShouldActivate( Vector3 playerPosition )
 		{
-			return ( Vector3.Distance( transform.position, playerPosition ) > 1.0f );
+			return ( Vector3.Distance( transform.position, playerPosition ) > _minDistanceToPlayerToActivatePoint );
 		}
 
 

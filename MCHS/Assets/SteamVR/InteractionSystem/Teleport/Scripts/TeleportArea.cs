@@ -14,6 +14,15 @@ namespace Valve.VR.InteractionSystem
 	//-------------------------------------------------------------------------
 	public class TeleportArea : TeleportMarkerBase
 	{
+		private void SwitchMaterials(Material material)
+		{
+			//areaMesh.material = material;
+			for (var i = 0; i < areaMesh.materials.Length; i++)
+			{
+				areaMesh.materials[i] = material;
+			}
+		}
+		
 		//Public properties
 		public Bounds meshBounds { get; private set; }
 
@@ -73,10 +82,12 @@ namespace Valve.VR.InteractionSystem
 				if ( highlight )
 				{
 					areaMesh.material = Teleport.instance.areaHighlightedMaterial;
+					//SwitchMaterials(Teleport.instance.areaHighlightedMaterial);
 				}
 				else
 				{
 					areaMesh.material = Teleport.instance.areaVisibleMaterial;
+					//SwitchMaterials(Teleport.instance.areaVisibleMaterial);
 				}
 			}
 		}
