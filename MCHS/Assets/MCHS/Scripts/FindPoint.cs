@@ -7,7 +7,7 @@ namespace MCHS.Scripts
 {
     public class FindPoint : MonoBehaviour
     {
-        //public static FindPoint instance;
+        public static FindPoint instance;
         
         private Camera _camera;
 
@@ -42,32 +42,12 @@ namespace MCHS.Scripts
         
         
         
-        /*private void Awake()
+        private void Awake()
         {
             if (instance == null)
             {
                 instance = this;
             }
-            else
-            {
-                Destroy(gameObject);
-            }
-            
-            SceneManager.sceneLoaded += OnSceneLoaded;
         }
-
-        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-        {
-            SceneManager.sceneLoaded -= OnSceneLoaded;
-            Destroy(gameObject);
-        }
-        
-        private void OnDestroy()
-        {
-            if (instance == this)
-            {
-                instance = null;
-            }
-        }*/
     }
 }
