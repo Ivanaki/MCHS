@@ -66,6 +66,7 @@ public class Fire : MonoBehaviour
     {
         isLit = false;
         enabled = false;
+        gameObject.SetActive(false);
     }
 
     private void ChangeIntensity() 

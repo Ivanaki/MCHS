@@ -107,7 +107,7 @@ public class DestructibleObject : MonoBehaviour
         //Activates the debris object and sets its position and rotation to match the object's
         debris.transform.position = transform.position;
         debris.transform.rotation = transform.rotation;
-        debris.transform.localScale = transform.localScale;
+        debris.transform.localScale = transform.lossyScale;
         debris.gameObject.SetActive(true);
 
         //Applies force to the debris based on the velocity of the object

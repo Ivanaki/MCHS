@@ -8,6 +8,7 @@ namespace MCHS.Scripts.BackPack
     [RequireComponent(typeof(Throwable))]
     [RequireComponent(typeof(InteractableHoverEvents))]
     [RequireComponent(typeof(Rigidbody))]
+    [SelectionBase]
     public class Item : MonoBehaviour
     {
         //private const float _sphereOverlapRadius = 0.3f;

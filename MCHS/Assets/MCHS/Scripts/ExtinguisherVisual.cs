@@ -6,6 +6,7 @@ using Valve.VR.InteractionSystem;
 namespace MCHS.Scripts
 {
     [RequireComponent(typeof(Interactable))]
+    [SelectionBase]
     public class ExtinguisherVisual : MonoBehaviour
     {
         [SerializeField] private Transform _offTransform;

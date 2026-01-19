@@ -19386,6 +19386,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198791558892717060, guid: 73767e07adddc394d82b994801f89bbb,
         type: 3}
+      propertyPath: lengthInSec
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 198791558892717060, guid: 73767e07adddc394d82b994801f89bbb,
+        type: 3}
       propertyPath: ShapeModule.angle
       value: 26.440042
       objectReference: {fileID: 0}
@@ -19427,12 +19432,12 @@ PrefabInstance:
     - target: {fileID: 198791558892717060, guid: 73767e07adddc394d82b994801f89bbb,
         type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 198791558892717060, guid: 73767e07adddc394d82b994801f89bbb,
         type: 3}
       propertyPath: InitialModule.startLifetime.minScalar
-      value: 8
+      value: 1.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
