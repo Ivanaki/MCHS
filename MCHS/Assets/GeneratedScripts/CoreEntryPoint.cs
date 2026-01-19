@@ -16,24 +16,20 @@ namespace Core.Root
         private Subject<Unit> _mainMenuSignalSub = new();
         [SerializeField] private Transform _basePosition;
         [SerializeField] private Transform _baseParent;
+        
+        private CoreEnterParams _enterParams;
 
         private void Start()
         {
-            var h = Resources.Load<Holo>("Holo");
-            if (h.isFirstStart)
+            if (_enterParams.IsGameStart)
             {
-                h.isFirstStart = false;
                 GoToMenu();
-            }
-            else
-            {
-                h.isFirstStart = true;
             }
         }
 
         public Observable<CoreExitParams> Run(DIContainer container, CoreEnterParams enterParams)
         {         
-            
+            _enterParams = enterParams;
             
             if (Player.instance != null)
             {
@@ -60,7 +56,7 @@ namespace Core.Root
             var exitParamsMainMenu = new CoreExitParams(Scenes.MAINMENU, mainMenuEnter);
             var exitMainMenuSubject = _mainMenuSignalSub.Select(_ => exitParamsMainMenu);
             
-            var restartEnter = new CoreEnterParams(Scenes.CORE, "");
+            var restartEnter = new CoreEnterParams(Scenes.CORE, "", false);
             var exitParamsRestart = new CoreExitParams(Scenes.CORE, restartEnter);
             var exitRestartSubject = _restartSignalSub.Select(_ => exitParamsRestart);
             

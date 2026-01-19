@@ -1,4 +1,4 @@
-using System;
+/*using System;
 using UnityEngine;
 using UnityEditor.UI;
 using UnityEngine.SceneManagement;
@@ -16,4 +16,4 @@ public class ForcedReset : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetSceneAt(0).path);
         }
     }
-}
+}*/

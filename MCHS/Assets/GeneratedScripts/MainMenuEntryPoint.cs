@@ -49,7 +49,7 @@ namespace MainMenu.Root
             Debug.Log($"MainMenu ENTRY POINT: save file name = , level to load = ");
             
             
-            var coreEnterParams = new CoreEnterParams(Scenes.MAINMENU,"car4");
+            var coreEnterParams = new CoreEnterParams(Scenes.MAINMENU,"car4", false);
             var coreMainMenuExitParams = new MainMenuExitParams(Scenes.CORE,coreEnterParams);
             var coreExitSignalSubject = _exitSignalSubCore.Select(_ => coreMainMenuExitParams);
 

@@ -19421,6 +19421,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5430907491835503401, guid: 518c280eaec5e28428d8e19b78a1d06d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430907491835503401, guid: 518c280eaec5e28428d8e19b78a1d06d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430907491835503401, guid: 518c280eaec5e28428d8e19b78a1d06d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.207
+      objectReference: {fileID: 0}
     - target: {fileID: 5595844887226941772, guid: 518c280eaec5e28428d8e19b78a1d06d,
         type: 3}
       propertyPath: m_Radius

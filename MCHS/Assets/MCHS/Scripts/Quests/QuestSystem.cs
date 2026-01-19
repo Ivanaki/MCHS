@@ -1,4 +1,3 @@
-using System;
 using R3;
 using UnityEngine;
 
@@ -19,7 +18,7 @@ namespace MCHS.Scripts.Quests
             "Оказать базовую помощь пострадавшему", //5
             "Вывести пострадавшего из горящего здания", //6
             "Вывести остальных пострадавших", //7
-            "Передать скорой информацию" //8
+            "Потушить оставшийся огонь" //8
         };
         
         private bool CheckQuestComplete(int index)

@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEngine; 
 using UnityEditor;
 
@@ -231,3 +232,4 @@ public class AutoSnap : EditorWindow
 		//EditorApplication.update -= Update;
 	}
 }
+#endif

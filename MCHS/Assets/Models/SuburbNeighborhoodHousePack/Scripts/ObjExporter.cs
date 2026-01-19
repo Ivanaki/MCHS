@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿#if UNITY_EDITOR
+using UnityEngine;
 using UnityEditor;
-using System.Collections;
 using System.IO;
 using System.Text;
 
@@ -160,3 +160,4 @@ public class ObjExporter : ScriptableObject
 		}
 	}
 }
+#endif

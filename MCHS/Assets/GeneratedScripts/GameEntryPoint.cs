@@ -73,7 +73,11 @@ namespace Game.Root
                     break;
 
                 case Scenes.CORE: 
-                    baseEnterParams ??= new CoreEnterParams("", "");
+#if UNITY_EDITOR
+                    baseEnterParams ??= new CoreEnterParams("", "", false);
+#else
+                    baseEnterParams ??= new CoreEnterParams("", "", true);
+#endif  
                     _coroutines.StartCoroutine(LoadAndStartCore(baseEnterParams?.As<CoreEnterParams>()));
                     break;
 
