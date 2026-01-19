@@ -38,7 +38,7 @@ namespace Game.Root
 
         private void RunGame()
         {
-            string nameScene = Scenes.MAINMENU;
+            string nameScene = Scenes.CORE;
 #if UNITY_EDITOR
             nameScene = SceneManager.GetActiveScene().name;
 

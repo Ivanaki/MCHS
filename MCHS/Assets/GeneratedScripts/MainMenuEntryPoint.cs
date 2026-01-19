@@ -1,3 +1,4 @@
+using System;
 using BaCon;
 using Game.Params;
 using Game.Root;
@@ -16,7 +17,13 @@ namespace MainMenu.Root
         
         [SerializeField] private Transform _basePosition;
         [SerializeField] private Transform _baseParent;
-        
+
+        private void Start()
+        {
+            
+            
+        }
+
         public Observable<MainMenuExitParams> Run(DIContainer container, MainMenuEnterParams enterParams)
         {
             if (Player.instance != null)
@@ -28,7 +35,7 @@ namespace MainMenu.Root
                 player.transform.localRotation = Quaternion.identity;
                 
                 
-                
+                Invoke(nameof(GoToCore), 41f);
                 
                 
             }

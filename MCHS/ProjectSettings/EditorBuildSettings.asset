@@ -6,20 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MCHS/Scenes/StartSteamVR.unity
-    guid: 3c1eff6e7c3e7fc41a69d3c008c3f95f
-  - enabled: 1
-    path: Assets/MCHS/Scenes/MainMenu.unity
-    guid: af72258367726a74d93446a6ce88f82e
-  - enabled: 1
-    path: Assets/SteamVR/InteractionSystem/Samples/Interactions_Example.unity
-    guid: e3b77830391f10343929883b18f4d5ae
-  - enabled: 1
     path: Assets/MCHS/Scenes/Core.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/MCHS/Scenes/CoreOld.unity
-    guid: ad9c6e7313af07e40ae62300518ed726
+    path: Assets/MCHS/Scenes/StartSteamVR.unity
+    guid: 3c1eff6e7c3e7fc41a69d3c008c3f95f
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 3dd6985d248a2724291b46a30456112a
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 8298a6d7bb1110f41badd66516f05b63,
       type: 2}

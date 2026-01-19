@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 3901355998340069369}
   - component: {fileID: 5446796901807606184}
   - component: {fileID: 7707154626476931860}
+  - component: {fileID: 6989851600068332525}
   m_Layer: 18
   m_Name: Mask
   m_TagString: Untagged
@@ -213,7 +214,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.02016593, y: 0, z: 0, w: 0.9997966}
   m_LocalPosition: {x: 0.711, y: 0.83, z: 0.985}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.00097087346, y: 0.00097087346, z: 0.0009708736}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3023115469427670897}
@@ -417,8 +418,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4daacd323740fcaa316746ac15c6f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsNested: 0
   <ItemType>k__BackingField: 1
+  <DontResize>k__BackingField: 0
   <SizeOfMaxSizeWhileInNest>k__BackingField: 0.533
+  <RotationInNest>k__BackingField: {x: 0, y: 0, z: 0, w: 1}
+  <PositionInNest>k__BackingField: {x: 0, y: 0, z: 0}
+--- !u!114 &6989851600068332525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5073071222410182800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee4e0e93bed464ea98e5470b05f761e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7200518128703136318
 GameObject:
   m_ObjectHideFlags: 0

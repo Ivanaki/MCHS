@@ -1,6 +1,8 @@
+using System;
 using BaCon;
 using Game.Params;
 using Game.Root;
+using MCHS;
 using R3;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
@@ -14,9 +16,25 @@ namespace Core.Root
         private Subject<Unit> _mainMenuSignalSub = new();
         [SerializeField] private Transform _basePosition;
         [SerializeField] private Transform _baseParent;
-        
+
+        private void Start()
+        {
+            var h = Resources.Load<Holo>("Holo");
+            if (h.isFirstStart)
+            {
+                h.isFirstStart = false;
+                GoToMenu();
+            }
+            else
+            {
+                h.isFirstStart = true;
+            }
+        }
+
         public Observable<CoreExitParams> Run(DIContainer container, CoreEnterParams enterParams)
-        {          
+        {         
+            
+            
             if (Player.instance != null)
             {
                 var player = Player.instance;
