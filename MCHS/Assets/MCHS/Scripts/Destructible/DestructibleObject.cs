@@ -11,6 +11,8 @@ using Random = UnityEngine.Random;
 
 public class DestructibleObject : MonoBehaviour
 {
+    [SerializeField] private GameObject _link;
+    
     [SerializeField] private float _cooldown = 0.5f;
     
     [SerializeField] private Material _0;
@@ -99,6 +101,9 @@ public class DestructibleObject : MonoBehaviour
         _healthProperty.Value -= force;
         if (_healthProperty.Value > 0) return;
         
+        if(_link != null)
+            _link.SetActive(true);
+        
         float velocityMagnitude = rigidbody.velocity.magnitude;
 
         debris.SetVariables(audioClipsBreak[Random.Range(0, audioClipsBreak.Count)], volume, volumeVariation, pitchVariation);
@@ -133,6 +138,9 @@ public class DestructibleObject : MonoBehaviour
         debris = Instantiate(_prefabBroken, transform.position, Quaternion.identity);
         
         debris.gameObject.SetActive(false);
+        
+        if(_link != null)
+            _link.SetActive(false);
     }
 
     private float _time = 0f;

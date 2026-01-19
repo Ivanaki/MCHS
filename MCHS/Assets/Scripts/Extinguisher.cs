@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Extinguisher : MonoBehaviour
 {
+    [SerializeField] private LayerMask _layerMask;
+    
     [SerializeField] private float extinguishRate = 1.0f; //amount of fire extinguished power (per second)
     [SerializeField] private float extinguishDisctance = 5f; // distance to fire
 
@@ -13,7 +15,7 @@ public class Extinguisher : MonoBehaviour
     [SerializeField] private GameObject steamObject = null;
     [SerializeField] private GameObject penaObject = null;
 
-    private bool IsRaycastingSomething(out RaycastHit hit) => Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out hit, extinguishDisctance);
+    private bool IsRaycastingSomething(out RaycastHit hit) => Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out hit, extinguishDisctance, _layerMask);
     
 
     private bool IsRaycastingFire(out Fire fire) 

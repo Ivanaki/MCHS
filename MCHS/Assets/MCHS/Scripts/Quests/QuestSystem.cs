@@ -8,25 +8,22 @@ namespace MCHS.Scripts.Quests
     {
         public static QuestSystem instance;
 
-        private string[] Quests = new[]
+        private string[] Quests = 
         {
-            "Возьмите предметы из машины", //0
-            "", //1
-            "", //2
-            "", //3
-            "", //4
-            "", //5
-            "", //6
-            "", //7
-            "", //8
-            "", //9
-            "", //10
-            "", //11
+            "Взять оборудование в пожарной машине", //0
+            "Найти вход в дом", //1
+            "Найти первого пострадавшего (Не забыть отметить все опасные места)", //2 Отмечать опасные места лазером
+            "Определить состояние пострадавшего", //3
+            "Обезопасить зону возле пострадавшего", //4
+            "Оказать базовую помощь пострадавшему", //5
+            "Вывести пострадавшего из горящего здания", //6
+            "Вывести остальных пострадавших", //7
+            "Передать скорой информацию" //8
         };
         
         private bool CheckQuestComplete(int index)
         {
-            switch (index)
+            /*switch (index)
             {
                 case 0:
                     
@@ -37,7 +34,8 @@ namespace MCHS.Scripts.Quests
                     return true;
             }
             
-            return false;
+            return false;*/
+            return true;
         }
         
         
@@ -70,7 +68,7 @@ namespace MCHS.Scripts.Quests
                 }
                 catch
                 {
-                    _currentQuestSubject.Value = "Поздравляем, вы прошли подготовку пожарного";
+                    _currentQuestSubject.Value = "Спасательная операция закончена, вернитесь к пожарной машине";
                     _isEnd = true;
                 }
                 

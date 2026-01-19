@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7737718122662400932}
   - component: {fileID: 1333886387977119719}
   - component: {fileID: 2500155796735363506}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: move_location_icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5953951917683001811}
   - component: {fileID: 7705871429588286133}
   - component: {fileID: 755016790533309832}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: teleport_marker_canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 2481116552864131310}
   - component: {fileID: 7406853551740547320}
   - component: {fileID: 3602450977153314138}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: teleport_marker_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7023749896794489874}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: teleport_marker_lookat_joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 253171238421421425}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: teleport_marker_lookat_joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7531891268458435165}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: teleport_marker_icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 5069346076429051096}
   - component: {fileID: 3567797273796871118}
   - component: {fileID: 2805447367513139109}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: move_location_icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,7 +567,7 @@ GameObject:
   - component: {fileID: 2152161630064785040}
   - component: {fileID: 2782394398312616501}
   - component: {fileID: 4997533687754291300}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: move_location_icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -731,7 +731,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7348819540537396873}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: teleport_marker_icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -767,7 +767,7 @@ GameObject:
   - component: {fileID: 2425047103009563396}
   - component: {fileID: 7169718461801671516}
   - component: {fileID: 6735529416727167353}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: teleport_marker_canvas_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -930,7 +930,7 @@ GameObject:
   - component: {fileID: 4263288019354008734}
   - component: {fileID: 5925195403400770197}
   - component: {fileID: 7409813448057880730}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: teleport_marker_canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1032,7 +1032,7 @@ GameObject:
   - component: {fileID: 8272206544446350238}
   - component: {fileID: 2875920218863824631}
   - component: {fileID: 3721537888847062279}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: teleport_marker_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1224,6 +1224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df0017fec6ca4d4c97045d46eb7c26d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _link: {fileID: 7288010351307979679}
   _cooldown: 0
   _0: {fileID: 0}
   _1: {fileID: 0}
@@ -1339,6 +1340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df0017fec6ca4d4c97045d46eb7c26d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _link: {fileID: 6828860809046512046}
   _cooldown: 0
   _0: {fileID: 0}
   _1: {fileID: 0}
@@ -1447,7 +1449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1078986162248206765}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: teleport_marker_icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1483,7 +1485,7 @@ GameObject:
   - component: {fileID: 6583653358158402687}
   - component: {fileID: 7299166314384121459}
   - component: {fileID: 2889687076178032453}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: move_location_icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1555,6 +1557,83 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &4693129006864893007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4328673269571021924}
+  - component: {fileID: 5681024625744648613}
+  - component: {fileID: 1274648761318496597}
+  m_Layer: 0
+  m_Name: Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4328673269571021924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4693129006864893007}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5922434473759575002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5681024625744648613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4693129006864893007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2cfff5dfa8c4244aa00fea9675adb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1073741824
+  uniqueID: 6846413759878673878
+  end: {fileID: 6206394432272854074}
+  costFactor: 1
+  oneWay: 0
+  pathfindingTag:
+    value: 0
+  graphMask:
+    value: -1
+--- !u!114 &1274648761318496597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4693129006864893007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb8246096363e0b48b549a58001a0bc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1073741824
+  actions:
+  - rid: 6630726260599816192
+  references:
+    version: 2
+    RefIds:
+    - rid: 6630726260599816192
+      type: {class: Interactable/TeleportAgentOnLinkAction, ns: Pathfinding.Examples,
+        asm: AstarPathfindingProjectExamples}
+      data:
+        destination: 1
 --- !u!1 &4879497739093382961
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,7 +1726,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 88625164324864363}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: teleport_marker_lookat_joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1862,7 +1941,7 @@ GameObject:
   - component: {fileID: 3319199329363262217}
   - component: {fileID: 1451480810037089389}
   - component: {fileID: 8061539825362130948}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: teleport_marker_canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2052,7 +2131,7 @@ GameObject:
   - component: {fileID: 716288710851731979}
   - component: {fileID: 1655286655471320075}
   - component: {fileID: 7176112000200977748}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: teleport_marker_canvas_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2132,7 +2211,7 @@ GameObject:
   - component: {fileID: 1298565319197638812}
   - component: {fileID: 8787476911342912771}
   - component: {fileID: 7333179071178009991}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: teleport_marker_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2251,7 +2330,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -12.045, y: 2.234, z: 19.12}
-  m_LocalScale: {x: 0.98075616, y: 0.98075616, z: 0.98075616}
+  m_LocalScale: {x: 1.2414634, y: 1.2414634, z: 1.2414634}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9129461878035701949}
@@ -2261,6 +2340,8 @@ Transform:
   - {fileID: 3316066588036846095}
   - {fileID: 862766539300979476}
   - {fileID: 7755744261033609145}
+  - {fileID: 5922434473759575002}
+  - {fileID: 5575718948241158013}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &6468883773911177944
@@ -2357,7 +2438,7 @@ GameObject:
   - component: {fileID: 1231145343887690500}
   - component: {fileID: 5116709493876867255}
   - component: {fileID: 7425511136330175879}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: switch_scenes_icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2441,7 +2522,7 @@ GameObject:
   - component: {fileID: 5713936206345222028}
   - component: {fileID: 7783459816699057037}
   - component: {fileID: 7588856024514137513}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: teleport_marker_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2545,7 +2626,7 @@ GameObject:
   - component: {fileID: 6807100806715502666}
   - component: {fileID: 2506130517134471351}
   - component: {fileID: 140919617864239857}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: locked_icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2617,6 +2698,70 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6816742652088172760
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4303082424348614682}
+  m_Layer: 0
+  m_Name: End
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4303082424348614682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6816742652088172760}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.086, y: 0.19, z: -0.966}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5575718948241158013}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6828860809046512046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5575718948241158013}
+  m_Layer: 0
+  m_Name: Link (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5575718948241158013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6828860809046512046}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.00000043213367, z: -0, w: 1}
+  m_LocalPosition: {x: 0.509, y: -1.6874743, z: 0.709}
+  m_LocalScale: {x: 1.0196215, y: 1.0196215, z: 1.0196215}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5181837650267108772}
+  - {fileID: 4303082424348614682}
+  m_Father: {fileID: 1159128961986234799}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7152565183888153895
 GameObject:
   m_ObjectHideFlags: 0
@@ -2917,6 +3062,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &7288010351307979679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5922434473759575002}
+  m_Layer: 0
+  m_Name: Link
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5922434473759575002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288010351307979679}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.00000043213367, z: -0, w: 1}
+  m_LocalPosition: {x: -0.5618112, y: -1.6874743, z: 0.6984406}
+  m_LocalScale: {x: 1.0196215, y: 1.0196215, z: 1.0196215}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4328673269571021924}
+  - {fileID: 6206394432272854074}
+  m_Father: {fileID: 1159128961986234799}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7384624440966662469
 GameObject:
   m_ObjectHideFlags: 0
@@ -3011,7 +3189,7 @@ GameObject:
   - component: {fileID: 5142353006811191696}
   - component: {fileID: 6706550984011800635}
   - component: {fileID: 7176218720730308892}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: locked_icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3092,7 +3270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3510678587448458846}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: teleport_marker_lookat_joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3127,7 +3305,7 @@ GameObject:
   - component: {fileID: 5251324867817517494}
   - component: {fileID: 8520884898792645456}
   - component: {fileID: 3966740780813572975}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: switch_scenes_icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3208,7 +3386,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4756330492720286738}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: teleport_marker_icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3245,7 +3423,7 @@ GameObject:
   - component: {fileID: 2861164831443022512}
   - component: {fileID: 7864141573114114759}
   - component: {fileID: 4638516795316583738}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: teleport_marker_canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3346,7 +3524,7 @@ GameObject:
   - component: {fileID: 7765787341258039363}
   - component: {fileID: 9041164963455822626}
   - component: {fileID: 1516817019566690512}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: teleport_marker_canvas_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3414,6 +3592,37 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 0.8
   m_Text: 
+--- !u!1 &8180820661647814185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6206394432272854074}
+  m_Layer: 0
+  m_Name: End
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6206394432272854074
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8180820661647814185}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.026, y: 0.19, z: -1.044}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5922434473759575002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8204156346049372802
 GameObject:
   m_ObjectHideFlags: 0
@@ -3515,7 +3724,7 @@ GameObject:
   - component: {fileID: 7263818087547905262}
   - component: {fileID: 1712521670372013496}
   - component: {fileID: 6833797339481647001}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: switch_scenes_icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3587,6 +3796,83 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &8362106273897239764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5181837650267108772}
+  - component: {fileID: 9091032035767201053}
+  - component: {fileID: 6256746455582340587}
+  m_Layer: 0
+  m_Name: Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5181837650267108772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8362106273897239764}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5575718948241158013}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9091032035767201053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8362106273897239764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2cfff5dfa8c4244aa00fea9675adb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1073741824
+  uniqueID: 5815075003909132054
+  end: {fileID: 4303082424348614682}
+  costFactor: 1
+  oneWay: 0
+  pathfindingTag:
+    value: 0
+  graphMask:
+    value: -1
+--- !u!114 &6256746455582340587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8362106273897239764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb8246096363e0b48b549a58001a0bc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1073741824
+  actions:
+  - rid: 6630726260599816192
+  references:
+    version: 2
+    RefIds:
+    - rid: 6630726260599816192
+      type: {class: Interactable/TeleportAgentOnLinkAction, ns: Pathfinding.Examples,
+        asm: AstarPathfindingProjectExamples}
+      data:
+        destination: 1
 --- !u!1 &8500429254619114909
 GameObject:
   m_ObjectHideFlags: 0
@@ -3681,7 +3967,7 @@ GameObject:
   - component: {fileID: 5456636609604830389}
   - component: {fileID: 5421335956718909656}
   - component: {fileID: 4684956591293164875}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: teleport_marker_canvas_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3760,7 +4046,7 @@ GameObject:
   - component: {fileID: 159537617077360086}
   - component: {fileID: 4051598239781796469}
   - component: {fileID: 5376450267900254824}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: switch_scenes_icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3843,7 +4129,7 @@ GameObject:
   - component: {fileID: 3287336297709481259}
   - component: {fileID: 7698560483086593624}
   - component: {fileID: 2796504795312135756}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: locked_icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3926,7 +4212,7 @@ GameObject:
   - component: {fileID: 7514266041245969171}
   - component: {fileID: 293031560813256834}
   - component: {fileID: 4821532027084822824}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: locked_icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
