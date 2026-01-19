@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 1497845854405855871}
   - component: {fileID: 2457098507973097074}
   - component: {fileID: 9088535670993747523}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: locked_icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6036897520421057309}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: teleport_marker_icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 2953244787773335765}
   - component: {fileID: 1366502952638471102}
   - component: {fileID: 5511997730982036385}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: teleport_marker_canvas_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1208536126263075138}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: teleport_marker_lookat_joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 757953051137260254}
   - component: {fileID: 7257175205714411967}
   - component: {fileID: 7861901014320079206}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: switch_scenes_icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 1850329460165369554}
   - component: {fileID: 2844070103836633617}
   - component: {fileID: 3108207364405503961}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: teleport_marker_canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 6706014107596431712}
   - component: {fileID: 4231133957271328765}
   - component: {fileID: 8208817869454359328}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: TeleportPoint (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -912,7 +912,7 @@ GameObject:
   - component: {fileID: 3333646747925378417}
   - component: {fileID: 6664042430751354876}
   - component: {fileID: 5230400309273884864}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: move_location_icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -996,7 +996,7 @@ GameObject:
   - component: {fileID: 4902657441814011492}
   - component: {fileID: 5256991894436647235}
   - component: {fileID: 9108237023740581894}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: teleport_marker_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,6 +9,8 @@ TagManager:
   - HeadCollider
   - Finger
   - LaserRay
+  - Door
+  - Glass
   layers:
   - Default
   - TransparentFX
@@ -29,7 +31,7 @@ TagManager:
   - Nest
   - Backpack
   - Item
-  - 
+  - TeleportPoint
   - Laser
   - Broken
   - 

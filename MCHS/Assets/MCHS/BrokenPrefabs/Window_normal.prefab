@@ -1683,7 +1683,7 @@ GameObject:
   - component: {fileID: 4672749826764625686}
   - component: {fileID: 1037396870746396750}
   - component: {fileID: 2641031725229448633}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: TeleportPoint (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1773,7 +1773,7 @@ GameObject:
   - component: {fileID: 3221334249557803312}
   - component: {fileID: 2907452751617524289}
   - component: {fileID: 183942287590426409}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: TeleportPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1964,7 +1964,7 @@ GameObject:
   - component: {fileID: 6968311220513248309}
   - component: {fileID: 2399075901806800606}
   - component: {fileID: 2864989799104113659}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: TeleportPoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3426,7 +3426,7 @@ GameObject:
   - component: {fileID: 7420212695867511885}
   - component: {fileID: 7188175523584608067}
   - component: {fileID: 8330024168301999706}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: TeleportPoint (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
